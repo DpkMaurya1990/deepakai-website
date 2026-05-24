@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industries | Deepak AI — WhatsApp Bots for Every Business</title>
+  <meta name="description" content="AI WhatsApp bots tailored for 8 high-demand industries: Clinics, Coaching, Restaurants, Salons, Real Estate, D2C Brands, CA/Legal, and Gyms.">
+  <meta property="og:title" content="Industries We Serve — Deepak AI">
+  <meta property="og:url" content="https://deepakai.in/industries.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:   '#0A0F1E',
+            secondary: '#0D1526',
+            card:      '#111827',
+            accent:    '#00D084',
+            'accent-h':'#00B872',
+            bdark:     '#1E2D45',
+            body:      '#94A3B8',
+            muted:     '#64748B',
+          },
+          fontFamily: {
+            sans:    ['Inter', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-primary text-white">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 navbar-blur border-b border-bdark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center text-black font-bold text-base">🤖</div>
+          <span class="font-poppins font-bold text-white text-xl">Deepak AI</span>
+        </a>
+        <div class="hidden md:flex items-center gap-7">
+          <a href="index.html"        class="nav-link text-body hover:text-white transition-colors text-sm font-medium">Home</a>
+          <a href="services.html"     class="nav-link text-body hover:text-white transition-colors text-sm font-medium">Services</a>
+          <a href="how-it-works.html" class="nav-link text-body hover:text-white transition-colors text-sm font-medium">How It Works</a>
+          <a href="industries.html"   class="nav-link text-body hover:text-white transition-colors text-sm font-medium">Industries</a>
+          <a href="contact.html"      class="nav-link text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+          <a href="contact.html" class="btn-green">Get Free Demo</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/5" aria-label="Open menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden border-t border-bdark py-4">
+        <div class="flex flex-col gap-1">
+          <a href="index.html"        class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Home</a>
+          <a href="services.html"     class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Services</a>
+          <a href="how-it-works.html" class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">How It Works</a>
+          <a href="industries.html"   class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Industries</a>
+          <a href="contact.html"      class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Contact</a>
+          <div class="pt-3 px-3"><a href="contact.html" class="btn-green w-full justify-center">Get Free Demo</a></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="hero-grid pt-32 pb-16 text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="fade-in-up mb-4"><span class="section-label">🏭 Industries</span></div>
+      <h1 class="fade-in-up font-poppins font-extrabold text-4xl sm:text-5xl mb-4">
+        Built for <span style="color:#00D084;">Your Business</span>
+      </h1>
+      <p class="fade-in-up text-body text-lg leading-relaxed">
+        Our AI WhatsApp bots are tailored for 8 high-demand industries.<br>
+        See how we solve your specific challenges.
+      </p>
+    </div>
+  </section>
+
+  <!-- TAB-BASED INDUSTRY SECTION -->
+  <section style="background-color:#0D1526;" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Tab Navigation -->
+      <div class="tab-nav flex gap-2.5 mb-10 pb-1">
+        <button class="tab-btn active" data-tab="clinics">🏥 Clinics &amp; Doctors</button>
+        <button class="tab-btn" data-tab="coaching">📚 Coaching</button>
+        <button class="tab-btn" data-tab="restaurants">🍽️ Restaurants</button>
+        <button class="tab-btn" data-tab="salons">💆 Salons &amp; Spas</button>
+        <button class="tab-btn" data-tab="realestate">🏠 Real Estate</button>
+        <button class="tab-btn" data-tab="d2c">📦 D2C Brands</button>
+        <button class="tab-btn" data-tab="legal">⚖️ CA &amp; Legal</button>
+        <button class="tab-btn" data-tab="gyms">🏋️ Gyms &amp; Fitness</button>
+      </div>
+
+      <!-- ===== CLINICS TAB ===== -->
+      <div class="tab-panel active" id="tab-clinics">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="fade-in-up visible">
+            <div class="mb-2"><span class="section-label" style="font-size:11px;">🏥 Clinics &amp; Doctors</span></div>
+            <h2 class="font-poppins font-bold text-3xl sm:text-4xl mt-4 mb-4">
+              Never Miss a Patient<br><span style="color:#00D084;">Enquiry Again</span>
+            </h2>
+            <p class="text-body text-base leading-relaxed mb-6">
+              Clinics lose 30–40% of patients who WhatsApp after hours. Your bot handles them all — 24/7, in Hindi. Every missed call is revenue you never see. We fix that permanently.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="card p-4 text-center">
+                <div class="font-poppins font-bold text-xl" style="color:#00D084;">+25–40</div>
+                <div class="text-muted text-xs mt-1">Extra patients/month</div>
+              </div>
+              <div class="card p-4 text-center">
+                <div class="font-poppins font-bold text-xl" style="color:#00D084;">60%</div>
+                <div class="text-muted text-xs mt-1">Fewer no-shows</div>
+              </div>
+              <div class="card p-4 text-center">
+                <div class="font-poppins font-bold text-xl" style="color:#00D084;">40+ hrs</div>
+                <div class="text-muted text-xs mt-1">Staff saved/month</div>
+              </div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8">
+              <li class="check-item"><span class="check-icon">✅</span><span>Appointment booking with advance payment to eliminate no-shows</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Patient reminder 24 hrs before visit — automated</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Emergency escalation to doctor — urgent cases handled first</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Google review collection post-visit — builds your reputation</span></li>
+            </ul>
+            <a href="contact.html?industry=clinic" class="btn-green btn-green-lg">Get Free Demo for Clinics →</a>
+          </div>
+          <div class="fade-in-up visible delay-200 wa-mockup">
+            <div class="wa-header">
+              <div class="wa-avatar">DC</div>
+              <div>
+                <div class="font-semibold text-white text-sm">Dr. Sharma's Clinic</div>
+                <div style="color:#25D366;font-size:12px;">● Bot Active — 24/7</div>
+              </div>
+            </div>
+            <div class="wa-messages">
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">I need a morning appointment tomorrow<div class="wa-time" style="text-align:right;">10:45 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">Hello! 👋 Tomorrow 9:15 AM or 11:00 AM is available. Which time works best for you?<div class="wa-time">10:45 PM</div></div></div>
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">9:15 AM please<div class="wa-time" style="text-align:right;">10:46 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">✅ 9:15 AM confirmed! ₹200 advance payment link:<br>💳 [Pay Now — UPI/Card]<br>You'll receive a reminder tomorrow. 🌟<div class="wa-time">10:46 PM</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== COACHING TAB ===== -->
+      <div class="tab-panel" id="tab-coaching">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="fade-in-up">
+            <div class="mb-2"><span class="section-label" style="font-size:11px;">📚 Coaching Institutes</span></div>
+            <h2 class="font-poppins font-bold text-3xl sm:text-4xl mt-4 mb-4">
+              Convert Every Enquiry<br><span style="color:#00D084;">into Enrollment</span>
+            </h2>
+            <p class="text-body text-base leading-relaxed mb-6">
+              Students enquire at all hours. Slow response = lost admission. Bot responds in 2 seconds, always. Never let a potential student slip away to a competitor.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="card p-4 text-center">
+                <div class="font-poppins font-bold text-xl" style="color:#00D084;">+12–18</div>
+                <div class="text-muted text-xs mt-1">Extra enrollments/mo</div>
+              </div>
+              <div class="card p-4 text-center">
+                <div class="font-poppins font-bold text-xl" style="color:#00D084;">3 hrs</div>
+                <div class="text-muted text-xs mt-1">Saved daily</div>
+              </div>
+              <div class="card p-4 text-center">
+                <div class="font-poppins font-bold text-xl" style="color:#00D084;">2 sec</div>
+                <div class="text-muted text-xs mt-1">Response time</div>
+              </div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8">
+              <li class="check-item"><span class="check-icon">✅</span><span>Course info + fee structure auto-reply in seconds</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Demo class booking automation — direct in WhatsApp</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Full fee collection via Razorpay in chat — no redirects</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>30-day follow-up for warm leads who haven't enrolled</span></li>
+            </ul>
+            <a href="contact.html?industry=coaching" class="btn-green btn-green-lg">Get Free Demo for Coaching →</a>
+          </div>
+          <div class="fade-in-up delay-200 wa-mockup">
+            <div class="wa-header"><div class="wa-avatar">CI</div><div><div class="font-semibold text-white text-sm">Sharma Coaching Centre</div><div style="color:#25D366;font-size:12px;">● Bot Active</div></div></div>
+            <div class="wa-messages">
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">What are the fees for the JEE batch?<div class="wa-time" style="text-align:right;">8:30 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">Hello! 🎓 JEE Mains Batch:<br>📅 2-Year: ₹85,000 | 1-Year: ₹55,000<br>Would you like to book a free demo class?<div class="wa-time">8:30 PM</div></div></div>
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">Yes, I'd like to book a demo<div class="wa-time" style="text-align:right;">8:31 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">✅ Demo class scheduled for Saturday 10 AM! A confirmation message is on its way. 🌟<div class="wa-time">8:31 PM</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== RESTAURANTS TAB ===== -->
+      <div class="tab-panel" id="tab-restaurants">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="fade-in-up">
+            <div class="mb-2"><span class="section-label" style="font-size:11px;">🍽️ Restaurants &amp; Cafes</span></div>
+            <h2 class="font-poppins font-bold text-3xl sm:text-4xl mt-4 mb-4">
+              Fill Tables.<br><span style="color:#00D084;">Reduce No-Shows.</span>
+            </h2>
+            <p class="text-body text-base leading-relaxed mb-6">
+              Empty tables cost you every night. Table reservation bots with advance deposits ensure customers show up. Direct orders mean zero Zomato commission — more money stays in your pocket.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">0%</div><div class="text-muted text-xs mt-1">Zomato commission</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">40%</div><div class="text-muted text-xs mt-1">Fewer no-shows</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">24/7</div><div class="text-muted text-xs mt-1">Reservation taking</div></div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8">
+              <li class="check-item"><span class="check-icon">✅</span><span>Table reservation with advance deposit to eliminate no-shows</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Menu sharing on WhatsApp — full catalogue in chat</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Special event booking — birthdays, anniversaries, corporate</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Direct orders inside WhatsApp — zero commission</span></li>
+            </ul>
+            <a href="contact.html?industry=restaurant" class="btn-green btn-green-lg">Get Free Demo for Restaurants →</a>
+          </div>
+          <div class="fade-in-up delay-200 wa-mockup">
+            <div class="wa-header"><div class="wa-avatar">RC</div><div><div class="font-semibold text-white text-sm">The Grand Restaurant</div><div style="color:#25D366;font-size:12px;">● Bot Active</div></div></div>
+            <div class="wa-messages">
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">Table for 4 on Saturday 8 PM<div class="wa-time" style="text-align:right;">6:00 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">🍽️ Saturday 8 PM — 4-seater available! Please pay ₹500 to confirm:<br>💳 [Pay Now]<div class="wa-time">6:00 PM</div></div></div>
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">✅ Payment done<div class="wa-time" style="text-align:right;">6:01 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">🎉 Confirmed! Table #7 on Saturday 8 PM. You'll get a reminder in the evening. See you! 🍷<div class="wa-time">6:01 PM</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SALONS TAB ===== -->
+      <div class="tab-panel" id="tab-salons">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="fade-in-up">
+            <div class="mb-2"><span class="section-label" style="font-size:11px;">💆 Salons &amp; Spas</span></div>
+            <h2 class="font-poppins font-bold text-3xl sm:text-4xl mt-4 mb-4">
+              Zero Empty Slots.<br><span style="color:#00D084;">Full Revenue.</span>
+            </h2>
+            <p class="text-body text-base leading-relaxed mb-6">
+              Every empty salon slot is lost revenue. The bot books appointments 24/7, takes advance payment, and sends reminders so customers never forget. Your stylists are always fully booked.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">30%</div><div class="text-muted text-xs mt-1">More bookings</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">50%</div><div class="text-muted text-xs mt-1">Fewer no-shows</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">24/7</div><div class="text-muted text-xs mt-1">Booking available</div></div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8">
+              <li class="check-item"><span class="check-icon">✅</span><span>Appointment booking + advance payment — ends no-shows</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Staff slot management — no double bookings ever</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Reminder 2 hrs before appointment — drastically fewer cancels</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Loyalty program messages — bring customers back monthly</span></li>
+            </ul>
+            <a href="contact.html?industry=salon" class="btn-green btn-green-lg">Get Free Demo for Salons →</a>
+          </div>
+          <div class="fade-in-up delay-200 wa-mockup">
+            <div class="wa-header"><div class="wa-avatar">GS</div><div><div class="font-semibold text-white text-sm">Glamour Salon</div><div style="color:#25D366;font-size:12px;">● Bot Active</div></div></div>
+            <div class="wa-messages">
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">I need an appointment for hair colour<div class="wa-time" style="text-align:right;">7:00 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">💆 Hair colour service! Tomorrow's available slots:<br>• 10:00 AM — Priya<br>• 2:00 PM — Neha<div class="wa-time">7:00 PM</div></div></div>
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">10 AM please<div class="wa-time" style="text-align:right;">7:01 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">✅ Booked! 10 AM with Priya. ₹300 advance:<br>💳 [Pay Now]<br>A reminder will be sent 2 hours before! 💇<div class="wa-time">7:01 PM</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== REAL ESTATE TAB ===== -->
+      <div class="tab-panel" id="tab-realestate">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="fade-in-up">
+            <div class="mb-2"><span class="section-label" style="font-size:11px;">🏠 Real Estate</span></div>
+            <h2 class="font-poppins font-bold text-3xl sm:text-4xl mt-4 mb-4">
+              Only Talk to<br><span style="color:#00D084;">Hot Leads.</span>
+            </h2>
+            <p class="text-body text-base leading-relaxed mb-6">
+              Stop wasting hours on unqualified enquiries. The bot qualifies every lead — budget, location, BHK preference — before you pick up the phone. Only hot leads reach you.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">3x</div><div class="text-muted text-xs mt-1">Site visits booked</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">80%</div><div class="text-muted text-xs mt-1">Leads qualified</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">24/7</div><div class="text-muted text-xs mt-1">Lead capture</div></div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8">
+              <li class="check-item"><span class="check-icon">✅</span><span>AI lead qualification — budget, location, BHK preferences</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Property details + images auto-shared in WhatsApp</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Site visit booking — automated calendar scheduling</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Lead scoring — hot / warm / cold categorization</span></li>
+            </ul>
+            <a href="contact.html?industry=realestate" class="btn-green btn-green-lg">Get Free Demo for Real Estate →</a>
+          </div>
+          <div class="fade-in-up delay-200 wa-mockup">
+            <div class="wa-header"><div class="wa-avatar">RE</div><div><div class="font-semibold text-white text-sm">Sharma Properties</div><div style="color:#25D366;font-size:12px;">● Bot Active</div></div></div>
+            <div class="wa-messages">
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">Looking for a 2BHK flat in Noida<div class="wa-time" style="text-align:right;">11:00 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">🏠 Noida 2BHK! What is your budget range?<br>A) 40–60L  B) 60–80L  C) 80L+<div class="wa-time">11:00 PM</div></div></div>
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">B — 60 to 80 lakhs<div class="wa-time" style="text-align:right;">11:01 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">✅ 3 properties match your criteria! Sharing photos now. Book a site visit for Saturday? 🏡<div class="wa-time">11:01 PM</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== D2C TAB ===== -->
+      <div class="tab-panel" id="tab-d2c">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="fade-in-up">
+            <div class="mb-2"><span class="section-label" style="font-size:11px;">📦 D2C Brands</span></div>
+            <h2 class="font-poppins font-bold text-3xl sm:text-4xl mt-4 mb-4">
+              Sell More.<br><span style="color:#00D084;">Inside WhatsApp.</span>
+            </h2>
+            <p class="text-body text-base leading-relaxed mb-6">
+              WhatsApp has 500M+ users in India. Your entire product catalogue, checkout, and post-order support — all inside WhatsApp. Turn every message into a sale.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">2x</div><div class="text-muted text-xs mt-1">Conversion rate</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">35%</div><div class="text-muted text-xs mt-1">Cart recovery</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">0%</div><div class="text-muted text-xs mt-1">Platform commission</div></div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8">
+              <li class="check-item"><span class="check-icon">✅</span><span>Catalogue bot — browse &amp; order entire product range in chat</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Payment collection via Razorpay — UPI, card, EMI in chat</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Order status updates — tracking via WhatsApp automatically</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Abandoned chat recovery — follow-up on incomplete orders</span></li>
+            </ul>
+            <a href="contact.html?industry=d2c" class="btn-green btn-green-lg">Get Free Demo for D2C Brands →</a>
+          </div>
+          <div class="fade-in-up delay-200 wa-mockup">
+            <div class="wa-header"><div class="wa-avatar">D2</div><div><div class="font-semibold text-white text-sm">MyBrand Store</div><div style="color:#25D366;font-size:12px;">● Shop Open 24/7</div></div></div>
+            <div class="wa-messages">
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">I'd like to browse your skincare products<div class="wa-time" style="text-align:right;">9:00 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">🛍️ Skincare Collection:<br>1️⃣ Vitamin C Serum — ₹699<br>2️⃣ Moisturizer — ₹499<br>3️⃣ Sunscreen SPF50 — ₹599<br>Which one would you like to know more about?<div class="wa-time">9:00 PM</div></div></div>
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">Option 1 — the serum<div class="wa-time" style="text-align:right;">9:01 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">✨ Vitamin C Serum — ₹699. Ready to order?<br>💳 [Pay Now — UPI/Card/EMI]<div class="wa-time">9:01 PM</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== LEGAL TAB ===== -->
+      <div class="tab-panel" id="tab-legal">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="fade-in-up">
+            <div class="mb-2"><span class="section-label" style="font-size:11px;">⚖️ CA &amp; Legal Firms</span></div>
+            <h2 class="font-poppins font-bold text-3xl sm:text-4xl mt-4 mb-4">
+              Automate Client Intake.<br><span style="color:#00D084;">Focus on Billable Hours.</span>
+            </h2>
+            <p class="text-body text-base leading-relaxed mb-6">
+              Stop spending billable hours answering basic queries. The bot handles all initial client intake, qualification, document requests, and scheduling — so you only engage when it truly matters.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">5 hrs</div><div class="text-muted text-xs mt-1">Saved weekly</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">2x</div><div class="text-muted text-xs mt-1">Client conversions</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">24/7</div><div class="text-muted text-xs mt-1">Intake running</div></div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8">
+              <li class="check-item"><span class="check-icon">✅</span><span>Service info + fee structure auto-reply — no repetitive calls</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Consultation booking — calendar scheduling via WhatsApp</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Document checklist sharing — clients come prepared</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Follow-up automation — convert warm prospects to clients</span></li>
+            </ul>
+            <a href="contact.html?industry=legal" class="btn-green btn-green-lg">Get Free Demo for CA/Legal →</a>
+          </div>
+          <div class="fade-in-up delay-200 wa-mockup">
+            <div class="wa-header"><div class="wa-avatar">CA</div><div><div class="font-semibold text-white text-sm">CA Sharma &amp; Associates</div><div style="color:#25D366;font-size:12px;">● Bot Active</div></div></div>
+            <div class="wa-messages">
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">What are the fees for GST registration?<div class="wa-time" style="text-align:right;">2:00 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">📋 GST Registration: ₹2,500 (3–5 working days). Documents needed:<br>📄 PAN, Aadhaar, Business proof<br>Would you like to book a consultation?<div class="wa-time">2:00 PM</div></div></div>
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">Yes, are you free tomorrow?<div class="wa-time" style="text-align:right;">2:01 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">✅ Tomorrow 3 PM is available! Please confirm. Sending you the document checklist now. ⚖️<div class="wa-time">2:01 PM</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== GYMS TAB ===== -->
+      <div class="tab-panel" id="tab-gyms">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="fade-in-up">
+            <div class="mb-2"><span class="section-label" style="font-size:11px;">🏋️ Gyms &amp; Fitness</span></div>
+            <h2 class="font-poppins font-bold text-3xl sm:text-4xl mt-4 mb-4">
+              Fill Memberships.<br><span style="color:#00D084;">Year Round.</span>
+            </h2>
+            <p class="text-body text-base leading-relaxed mb-6">
+              Gym memberships expire silently. The bot sends renewal reminders before they lapse, books trial classes for prospects, and runs targeted local ads to keep your gym full every month.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">40%</div><div class="text-muted text-xs mt-1">More renewals</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">+20</div><div class="text-muted text-xs mt-1">New trials/month</div></div>
+              <div class="card p-4 text-center"><div class="font-poppins font-bold text-xl" style="color:#00D084;">24/7</div><div class="text-muted text-xs mt-1">Enquiry handling</div></div>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8">
+              <li class="check-item"><span class="check-icon">✅</span><span>Membership plan info + pricing — instant auto-reply</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Trial class booking — direct in WhatsApp, 24/7</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Renewal reminders — sent 7 days before expiry</span></li>
+              <li class="check-item"><span class="check-icon">✅</span><span>Targeted local ad campaigns (Full Stack plan)</span></li>
+            </ul>
+            <a href="contact.html?industry=gym" class="btn-green btn-green-lg">Get Free Demo for Gyms →</a>
+          </div>
+          <div class="fade-in-up delay-200 wa-mockup">
+            <div class="wa-header"><div class="wa-avatar">GF</div><div><div class="font-semibold text-white text-sm">FitZone Gym</div><div style="color:#25D366;font-size:12px;">● Bot Active</div></div></div>
+            <div class="wa-messages">
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">Can I get details about your membership plans?<div class="wa-time" style="text-align:right;">8:00 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">💪 FitZone Plans:<br>1 Month: ₹1,500<br>3 Months: ₹3,800<br>Annual: ₹12,000<br>Want to try a free class first? 🏋️<div class="wa-time">8:00 PM</div></div></div>
+              <div class="flex justify-end"><div class="wa-bubble wa-bubble-out">Yes, I'd like to book a free trial<div class="wa-time" style="text-align:right;">8:01 PM ✓✓</div></div></div>
+              <div class="flex justify-start"><div class="wa-bubble wa-bubble-in">✅ Free trial booked for tomorrow morning 6 AM! Address: Sector 18, Noida. See you there! 💪<div class="wa-time">8:01 PM</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="py-20 cta-banner">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="fade-in-up font-poppins font-extrabold text-3xl sm:text-4xl mb-4">
+        Your Industry. <span style="color:#00D084;">Our Expertise.</span>
+      </h2>
+      <p class="fade-in-up text-body text-lg mb-8">Get a free demo customised for your specific business type.</p>
+      <a href="contact.html" class="fade-in-up btn-green btn-green-lg">🤖 Book Industry-Specific Demo →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color: #070C18; border-top: 1px solid #1E2D45;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center text-black font-bold">🤖</div>
+            <span class="font-poppins font-bold text-white text-xl">Deepak AI</span>
+          </a>
+          <p class="text-body text-sm mb-5 leading-relaxed">AI-Powered WhatsApp Solutions for Indian SMBs</p>
+          <div class="flex flex-col gap-2.5 text-sm">
+            <a href="https://wa.me/919999517081" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-accent transition-colors" style="color:#94A3B8;"><span>📱</span> WhatsApp Us</a>
+            <a href="mailto:deepak@deepakai.in" class="flex items-center gap-2 hover:text-white transition-colors" style="color:#94A3B8;"><span>📧</span> deepak@deepakai.in</a>
+            <span class="flex items-center gap-2" style="color:#94A3B8;"><span>🌐</span> deepakai.in</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-poppins font-semibold text-white mb-4 text-sm uppercase tracking-wider">Services</h4>
+          <ul class="flex flex-col gap-2.5 text-sm">
+            <li><a href="services.html" class="text-body hover:text-accent transition-colors">Starter Bot</a></li>
+            <li><a href="services.html" class="text-body hover:text-accent transition-colors">Growth Bot</a></li>
+            <li><a href="services.html" class="text-body hover:text-accent transition-colors">Full Stack Bot</a></li>
+            <li><a href="services.html" class="text-body hover:text-accent transition-colors">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-poppins font-semibold text-white mb-4 text-sm uppercase tracking-wider">Company</h4>
+          <ul class="flex flex-col gap-2.5 text-sm">
+            <li><a href="how-it-works.html" class="text-body hover:text-accent transition-colors">How It Works</a></li>
+            <li><a href="industries.html"   class="text-body hover:text-accent transition-colors">Industries</a></li>
+            <li><a href="index.html#results" class="text-body hover:text-accent transition-colors">Results</a></li>
+            <li><a href="contact.html"      class="text-body hover:text-accent transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-poppins font-semibold text-white mb-4 text-sm uppercase tracking-wider">Get Started</h4>
+          <p class="text-body text-sm mb-5 leading-relaxed">Try risk-free for 7 days. No payment needed upfront.</p>
+          <a href="contact.html" class="btn-green text-sm">Book Free Demo</a>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-bdark flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-muted">
+        <span>© 2025 Deepak AI Solutions. All rights reserved.</span>
+        <span>deepakai.in — Smart WhatsApp Bots for Indian Businesses</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/919999517081" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="Chat with us">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

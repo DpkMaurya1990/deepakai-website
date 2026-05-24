@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Free Demo | Deepak AI — AI WhatsApp Bot Setup</title>
+  <meta name="description" content="Book your free WhatsApp bot demo. Fill the form and we'll call you within 2 hours. Bot goes live in 48 hours. 7-day free trial included.">
+  <meta property="og:title" content="Book Free Demo — Deepak AI">
+  <meta property="og:url" content="https://deepakai.in/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:   '#0A0F1E',
+            secondary: '#0D1526',
+            card:      '#111827',
+            accent:    '#00D084',
+            'accent-h':'#00B872',
+            bdark:     '#1E2D45',
+            body:      '#94A3B8',
+            muted:     '#64748B',
+          },
+          fontFamily: {
+            sans:    ['Inter', 'sans-serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-primary text-white">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 navbar-blur border-b border-bdark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center text-black font-bold text-base">🤖</div>
+          <span class="font-poppins font-bold text-white text-xl">Deepak AI</span>
+        </a>
+        <div class="hidden md:flex items-center gap-7">
+          <a href="index.html"        class="nav-link text-body hover:text-white transition-colors text-sm font-medium">Home</a>
+          <a href="services.html"     class="nav-link text-body hover:text-white transition-colors text-sm font-medium">Services</a>
+          <a href="how-it-works.html" class="nav-link text-body hover:text-white transition-colors text-sm font-medium">How It Works</a>
+          <a href="industries.html"   class="nav-link text-body hover:text-white transition-colors text-sm font-medium">Industries</a>
+          <a href="contact.html"      class="nav-link text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+          <a href="contact.html" class="btn-green">Get Free Demo</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/5" aria-label="Open menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden border-t border-bdark py-4">
+        <div class="flex flex-col gap-1">
+          <a href="index.html"        class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Home</a>
+          <a href="services.html"     class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Services</a>
+          <a href="how-it-works.html" class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">How It Works</a>
+          <a href="industries.html"   class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Industries</a>
+          <a href="contact.html"      class="nav-link text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Contact</a>
+          <div class="pt-3 px-3"><a href="contact.html" class="btn-green w-full justify-center">Get Free Demo</a></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="hero-grid pt-32 pb-12 text-center">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+      <div class="fade-in-up mb-4"><span class="section-label">🚀 Get Started</span></div>
+      <h1 class="fade-in-up font-poppins font-extrabold text-4xl sm:text-5xl mb-4">
+        Book Your <span style="color:#00D084;">Free Demo</span>
+      </h1>
+      <p class="fade-in-up text-body text-lg leading-relaxed">
+        Fill in the form and we'll reach out within 2 hours to schedule your free demo and get your bot live in 48 hours.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORM + SIDEBAR -->
+  <section class="py-12 bg-primary">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+
+        <!-- CONTACT FORM (2/3 width) -->
+        <div class="lg:col-span-2 fade-in-up">
+          <div class="card p-8 sm:p-10">
+            <h2 class="font-poppins font-bold text-2xl mb-1">Tell Us About Your Business</h2>
+            <p class="text-body text-sm mb-8">All fields marked * are required.</p>
+
+            <form id="contact-form" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                <!-- Name -->
+                <div class="flex flex-col gap-1.5">
+                  <label for="name" class="text-sm font-semibold text-white">Your Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Rajesh Kumar"
+                    required
+                    autocomplete="name"
+                  >
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="flex flex-col gap-1.5">
+                  <label for="phone" class="text-sm font-semibold text-white">WhatsApp Number *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-input"
+                    placeholder="+91 98765 43210"
+                    required
+                    autocomplete="tel"
+                    pattern="[0-9+\s-]{10,14}"
+                  >
+                </div>
+
+                <!-- Email -->
+                <div class="flex flex-col gap-1.5">
+                  <label for="email" class="text-sm font-semibold text-white">Email Address <span class="text-muted font-normal">(optional)</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="rajesh@clinic.com"
+                    autocomplete="email"
+                  >
+                </div>
+
+                <!-- Business Name -->
+                <div class="flex flex-col gap-1.5">
+                  <label for="business" class="text-sm font-semibold text-white">Business Name *</label>
+                  <input
+                    type="text"
+                    id="business"
+                    name="business"
+                    class="form-input"
+                    placeholder="Dr. Sharma's Clinic"
+                    required
+                    autocomplete="organization"
+                  >
+                </div>
+
+                <!-- Industry -->
+                <div class="flex flex-col gap-1.5">
+                  <label for="industry" class="text-sm font-semibold text-white">Industry *</label>
+                  <select id="industry" name="industry" class="form-input" required>
+                    <option value="" disabled selected>Select your industry</option>
+                    <option value="Clinics &amp; Doctors">🏥 Clinics &amp; Doctors</option>
+                    <option value="Coaching Institute">📚 Coaching Institute</option>
+                    <option value="Restaurant / Cafe">🍽️ Restaurant / Cafe</option>
+                    <option value="Salon &amp; Spa">💆 Salon &amp; Spa</option>
+                    <option value="Real Estate">🏠 Real Estate</option>
+                    <option value="D2C Brand">📦 D2C Brand</option>
+                    <option value="CA / Legal Firm">⚖️ CA / Legal Firm</option>
+                    <option value="Gym / Fitness">🏋️ Gym / Fitness</option>
+                    <option value="Other">🔹 Other</option>
+                  </select>
+                </div>
+
+                <!-- Plan -->
+                <div class="flex flex-col gap-1.5">
+                  <label for="plan" class="text-sm font-semibold text-white">Interested Plan</label>
+                  <select id="plan" name="plan" class="form-input">
+                    <option value="" disabled selected>Select a plan</option>
+                    <option value="Starter Bot — ₹5,999/month">Starter Bot — ₹5,999/month</option>
+                    <option value="Growth Bot — ₹9,999/month (Most Popular)">Growth Bot — ₹9,999/month (Most Popular)</option>
+                    <option value="Full Stack Bot — ₹19,999/month">Full Stack Bot — ₹19,999/month</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <!-- Message -->
+              <div class="flex flex-col gap-1.5 mt-5">
+                <label for="message" class="text-sm font-semibold text-white">Anything specific you'd like to automate?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input"
+                  rows="4"
+                  placeholder="e.g. I want to automate appointment booking and reduce no-shows at my clinic. Currently losing 3–4 patients daily after 8 PM..."
+                ></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div class="mt-7">
+                <button type="submit" class="btn-green btn-green-lg w-full justify-center" style="font-size:16px;">
+                  🤖 Book My Free Demo →
+                </button>
+                <p class="text-muted text-center text-xs mt-3 leading-relaxed">
+                  No payment required &nbsp;•&nbsp; 7-day free trial included &nbsp;•&nbsp; We'll call you within 2 hours
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- SIDEBAR (1/3 width) -->
+        <div class="fade-in-up delay-200 flex flex-col gap-6">
+
+          <!-- Contact Details -->
+          <div class="card p-6">
+            <h3 class="font-poppins font-semibold text-white text-lg mb-5">Contact Details</h3>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-start gap-3">
+                <div class="text-xl flex-shrink-0 mt-0.5">📱</div>
+                <div>
+                  <div class="text-white text-sm font-semibold">Call / WhatsApp</div>
+                  <a href="https://wa.me/919999517081" target="_blank" rel="noopener noreferrer" class="text-accent text-sm hover:underline">+91 99995 17081</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="text-xl flex-shrink-0 mt-0.5">📧</div>
+                <div>
+                  <div class="text-white text-sm font-semibold">Email</div>
+                  <a href="mailto:deepak@deepakai.in" class="text-body text-sm hover:text-white transition-colors">deepak@deepakai.in</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="text-xl flex-shrink-0 mt-0.5">📍</div>
+                <div>
+                  <div class="text-white text-sm font-semibold">Location</div>
+                  <div class="text-body text-sm">New Delhi, India<br><span class="text-muted text-xs">Serving all of India</span></div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="text-xl flex-shrink-0 mt-0.5">🕐</div>
+                <div>
+                  <div class="text-white text-sm font-semibold">Response Time</div>
+                  <div class="text-body text-sm">Within 2 hours<br><span class="text-muted text-xs">9 AM – 9 PM IST</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- What Happens After Submit -->
+          <div class="card p-6">
+            <h3 class="font-poppins font-semibold text-white text-lg mb-5">What Happens Next?</h3>
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-3 items-start">
+                <div class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 font-poppins font-bold text-xs text-black" style="background:#00D084;">1</div>
+                <p class="text-body text-sm leading-relaxed pt-0.5">We call you within 2 hours</p>
+              </div>
+              <div class="flex gap-3 items-start">
+                <div class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 font-poppins font-bold text-xs text-black" style="background:#00D084;">2</div>
+                <p class="text-body text-sm leading-relaxed pt-0.5">30-min free demo of your custom bot</p>
+              </div>
+              <div class="flex gap-3 items-start">
+                <div class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 font-poppins font-bold text-xs text-black" style="background:#00D084;">3</div>
+                <p class="text-body text-sm leading-relaxed pt-0.5">We build your bot (Day 1–2)</p>
+              </div>
+              <div class="flex gap-3 items-start">
+                <div class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 font-poppins font-bold text-xs text-black" style="background:#00D084;">4</div>
+                <p class="text-body text-sm leading-relaxed pt-0.5">Bot goes live on your WhatsApp</p>
+              </div>
+              <div class="flex gap-3 items-start">
+                <div class="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 font-poppins font-bold text-xs text-black" style="background:#00D084;">5</div>
+                <p class="text-body text-sm leading-relaxed pt-0.5"><strong class="text-white">7-day free trial begins 🎉</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="card p-6">
+            <h3 class="font-poppins font-semibold text-white text-base mb-4">Our Promise to You</h3>
+            <div class="flex flex-col gap-3">
+              <div class="check-item"><span class="check-icon">✅</span><span class="text-sm">7-day free trial — no payment upfront</span></div>
+              <div class="check-item"><span class="check-icon">✅</span><span class="text-sm">Bot live within 48 hours</span></div>
+              <div class="check-item"><span class="check-icon">✅</span><span class="text-sm">No lock-in — cancel anytime</span></div>
+              <div class="check-item"><span class="check-icon">✅</span><span class="text-sm">Ongoing support included</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background-color: #070C18; border-top: 1px solid #1E2D45;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center text-black font-bold">🤖</div>
+            <span class="font-poppins font-bold text-white text-xl">Deepak AI</span>
+          </a>
+          <p class="text-body text-sm mb-5 leading-relaxed">AI-Powered WhatsApp Solutions for Indian SMBs</p>
+          <div class="flex flex-col gap-2.5 text-sm">
+            <a href="https://wa.me/919999517081" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-accent transition-colors" style="color:#94A3B8;"><span>📱</span> WhatsApp Us</a>
+            <a href="mailto:deepak@deepakai.in" class="flex items-center gap-2 hover:text-white transition-colors" style="color:#94A3B8;"><span>📧</span> deepak@deepakai.in</a>
+            <span class="flex items-center gap-2" style="color:#94A3B8;"><span>🌐</span> deepakai.in</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-poppins font-semibold text-white mb-4 text-sm uppercase tracking-wider">Services</h4>
+          <ul class="flex flex-col gap-2.5 text-sm">
+            <li><a href="services.html" class="text-body hover:text-accent transition-colors">Starter Bot</a></li>
+            <li><a href="services.html" class="text-body hover:text-accent transition-colors">Growth Bot</a></li>
+            <li><a href="services.html" class="text-body hover:text-accent transition-colors">Full Stack Bot</a></li>
+            <li><a href="services.html" class="text-body hover:text-accent transition-colors">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-poppins font-semibold text-white mb-4 text-sm uppercase tracking-wider">Company</h4>
+          <ul class="flex flex-col gap-2.5 text-sm">
+            <li><a href="how-it-works.html" class="text-body hover:text-accent transition-colors">How It Works</a></li>
+            <li><a href="industries.html"   class="text-body hover:text-accent transition-colors">Industries</a></li>
+            <li><a href="index.html#results" class="text-body hover:text-accent transition-colors">Results</a></li>
+            <li><a href="contact.html"      class="text-body hover:text-accent transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-poppins font-semibold text-white mb-4 text-sm uppercase tracking-wider">Get Started</h4>
+          <p class="text-body text-sm mb-5 leading-relaxed">Try risk-free for 7 days. No payment needed upfront.</p>
+          <a href="contact.html" class="btn-green text-sm">Book Free Demo</a>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-bdark flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-muted">
+        <span>© 2025 Deepak AI Solutions. All rights reserved.</span>
+        <span>deepakai.in — Smart WhatsApp Bots for Indian Businesses</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/919999517081" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="Chat with us">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
