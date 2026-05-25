@@ -182,17 +182,17 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      const text = `🤖 *New Demo Request — Deepak AI*
+      const text = `*New Demo Request - Deepak AI*
 
-👤 Name: ${name}
-📱 WhatsApp: ${phone}
-📧 Email: ${email || 'Not provided'}
-🏢 Business: ${business}
-🏭 Industry: ${industry}
-📦 Plan: ${plan || 'Not sure yet'}
-💬 Message: ${message || 'No additional info'}
+Name: ${name}
+WhatsApp: ${phone}
+Email: ${email || 'Not provided'}
+Business: ${business}
+Industry: ${industry}
+Plan: ${plan || 'Not sure yet'}
+Message: ${message || 'No additional info'}
 
-_Request via deepakai.in_`;
+_via deepakai.in_`;
 
       // Send lead data to Formspree (email backup — fire & forget)
       fetch('https://formspree.io/f/mkoeqgzq', {
