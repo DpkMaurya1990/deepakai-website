@@ -194,6 +194,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 _Request via deepakai.in_`;
 
+      // Send lead data to Formspree (email backup — fire & forget)
+      fetch('https://formspree.io/f/mkoeqgzq', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, email, business, industry, plan, message })
+      }).catch(() => {}); // silent fail — WhatsApp is the primary channel
+
       const waURL = `https://wa.me/919999517081?text=${encodeURIComponent(text)}`;
       window.open(waURL, '_blank', 'noopener,noreferrer');
 
