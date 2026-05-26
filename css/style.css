@@ -3,16 +3,16 @@
    ============================================ */
 
 :root {
-  --bg-primary:     #0A0F1E;
+  --bg-primary:     #040C1E;
   --bg-secondary:   #0D1526;
   --bg-card:        #111827;
-  --accent:         #00D084;
-  --accent-hover:   #00B872;
+  --accent:         #1E7FFF;
+  --accent-hover:   #1A6FE0;
   --text-primary:   #FFFFFF;
   --text-secondary: #94A3B8;
   --text-muted:     #64748B;
   --border-color:   #1E2D45;
-  --badge-green:    #065F46;
+  --badge-blue:     #0F2A5C;
 }
 
 /* ===== Base ===== */
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-blur {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  background-color: rgba(10, 15, 30, 0.92);
+  background-color: rgba(4, 12, 30, 0.92);
 }
 
 .active-nav {
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Buttons ===== */
 .btn-green {
   background-color: var(--accent);
-  color: #000;
+  color: #fff;
   font-weight: 600;
   padding: 11px 22px;
   border-radius: 8px;
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-green:hover {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 208, 132, 0.3);
+  box-shadow: 0 8px 24px rgba(30, 127, 255, 0.35);
 }
 
 .btn-green-lg {
@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline:hover {
-  background-color: rgba(0, 208, 132, 0.1);
+  background-color: rgba(30, 127, 255, 0.1);
   transform: translateY(-2px);
 }
 
@@ -119,19 +119,29 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Hero ===== */
 .hero-grid {
   background-image:
-    linear-gradient(rgba(0, 208, 132, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 208, 132, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(30, 127, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 127, 255, 0.04) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
 .hero-glow {
   position: absolute;
   top: 20%;
-  left: 50%;
+  left: 35%;
   transform: translateX(-50%);
   width: 600px;
+  height: 340px;
+  background: radial-gradient(ellipse, rgba(30, 127, 255, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-glow-purple {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  width: 400px;
   height: 300px;
-  background: radial-gradient(ellipse, rgba(0, 208, 132, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(123, 47, 190, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -140,8 +150,8 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(0, 208, 132, 0.1);
-  border: 1px solid rgba(0, 208, 132, 0.3);
+  background: rgba(30, 127, 255, 0.1);
+  border: 1px solid rgba(30, 127, 255, 0.3);
   color: var(--accent);
   padding: 5px 16px;
   border-radius: 100px;
@@ -160,27 +170,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card:hover {
-  border-color: rgba(0, 208, 132, 0.25);
-  box-shadow: 0 8px 32px rgba(0, 208, 132, 0.08);
+  border-color: rgba(30, 127, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(30, 127, 255, 0.08);
   transform: translateY(-2px);
 }
 
 .card-popular {
   background-color: var(--bg-card);
-  border: 2px solid rgba(0, 208, 132, 0.5) !important;
+  border: 2px solid rgba(30, 127, 255, 0.5) !important;
   border-radius: 16px;
-  box-shadow: 0 0 40px rgba(0, 208, 132, 0.12), 0 8px 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(30, 127, 255, 0.14), 0 8px 32px rgba(0, 0, 0, 0.3);
   transform: scale(1.03);
   position: relative;
 }
 
 .card-popular:hover {
-  box-shadow: 0 0 60px rgba(0, 208, 132, 0.2), 0 12px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 60px rgba(30, 127, 255, 0.22), 0 12px 40px rgba(0, 0, 0, 0.4);
   transform: scale(1.04) translateY(-2px);
 }
 
 .badge-popular {
-  background-color: var(--badge-green);
+  background-color: var(--badge-blue);
   color: var(--accent);
   font-size: 11px;
   font-weight: 700;
@@ -193,8 +203,8 @@ h1, h2, h3, h4, h5, h6 {
 .icon-box {
   width: 52px;
   height: 52px;
-  background: rgba(0, 208, 132, 0.1);
-  border: 1px solid rgba(0, 208, 132, 0.2);
+  background: rgba(30, 127, 255, 0.1);
+  border: 1px solid rgba(30, 127, 255, 0.2);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -209,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 208, 132, 0.05);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(30, 127, 255, 0.06);
   max-width: 340px;
   width: 100%;
 }
@@ -353,13 +363,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tab-btn.active {
-  background-color: rgba(0, 208, 132, 0.12);
+  background-color: rgba(30, 127, 255, 0.12);
   border-color: var(--accent);
   color: var(--accent);
 }
 
 .tab-btn:hover:not(.active) {
-  border-color: rgba(0, 208, 132, 0.3);
+  border-color: rgba(30, 127, 255, 0.3);
   color: #fff;
 }
 
@@ -407,8 +417,8 @@ h1, h2, h3, h4, h5, h6 {
 .step-number {
   width: 52px;
   height: 52px;
-  background: rgba(0, 208, 132, 0.12);
-  border: 2px solid rgba(0, 208, 132, 0.4);
+  background: rgba(30, 127, 255, 0.12);
+  border: 2px solid rgba(30, 127, 255, 0.4);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -423,7 +433,7 @@ h1, h2, h3, h4, h5, h6 {
 .timeline-connector {
   width: 2px;
   flex: 1;
-  background: linear-gradient(to bottom, rgba(0, 208, 132, 0.4), rgba(0, 208, 132, 0.05));
+  background: linear-gradient(to bottom, rgba(30, 127, 255, 0.4), rgba(30, 127, 255, 0.05));
   margin: 0 auto;
 }
 
@@ -445,7 +455,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .form-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(0, 208, 132, 0.1);
+  box-shadow: 0 0 0 3px rgba(30, 127, 255, 0.12);
 }
 
 .form-input::placeholder {
@@ -500,8 +510,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== CTA Banner ===== */
 .cta-banner {
-  background: linear-gradient(135deg, rgba(0, 208, 132, 0.08) 0%, rgba(0, 208, 132, 0.03) 50%, rgba(0, 0, 0, 0) 100%);
-  border: 1px solid rgba(0, 208, 132, 0.12);
+  background: linear-gradient(135deg, rgba(30, 127, 255, 0.08) 0%, rgba(123, 47, 190, 0.04) 50%, rgba(0, 0, 0, 0) 100%);
+  border: 1px solid rgba(30, 127, 255, 0.12);
 }
 
 /* ===== Mobile Menu ===== */
@@ -533,7 +543,7 @@ h1, h2, h3, h4, h5, h6 {
 .industry-chip:hover {
   border-color: var(--accent);
   color: var(--accent);
-  background: rgba(0, 208, 132, 0.06);
+  background: rgba(30, 127, 255, 0.06);
 }
 
 /* ===== Trust badge (small inline) ===== */
