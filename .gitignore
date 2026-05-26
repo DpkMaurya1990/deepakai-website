@@ -20,3 +20,6 @@ npm-debug.log*
 *.tmp
 *.bak
 *.swp
+
+# Personal reference docs
+STEPS.md
