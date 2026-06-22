@@ -2,6 +2,11 @@
    deepakai.in — Custom CSS
    ============================================ */
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}   
+
 :root {
   --bg-primary:     #040C1E;
   --bg-secondary:   #0D1526;
