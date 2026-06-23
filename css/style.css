@@ -602,3 +602,20 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 640px) {
   .btn-green-lg, .btn-white-outline { font-size: 15px; padding: 12px 20px; }
 }
+
+
+
+/* ===== Shimmer Animation ===== */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #1E7FFF 30%, #ffffff 50%, #1E7FFF 70%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 2.5s linear infinite;
+  font-weight: 700;
+}
