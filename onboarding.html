@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Onboarding | DeepAKAI — WhatsApp AI Bot Setup</title>
+  <meta name="description" content="Fill this form to get your WhatsApp AI Bot ready within 48 hours.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:'#040C1E', secondary:'#0D1526', card:'#111827',
+            accent:'#1E7FFF', 'accent-h':'#1A6FE0', bdark:'#1E2D45',
+            body:'#94A3B8', muted:'#64748B',
+          },
+          fontFamily: { sans:['Inter','sans-serif'], poppins:['Poppins','sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .section-header { display:flex; align-items:center; gap:10px; padding-bottom:14px; border-bottom:1px solid #1E2D45; margin-bottom:20px; }
+    .section-number { width:32px; height:32px; background:rgba(30,127,255,0.12); border:1px solid rgba(30,127,255,0.4); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Poppins',sans-serif; font-weight:700; font-size:14px; color:#1E7FFF; flex-shrink:0; }
+    .note-box { background:rgba(30,127,255,0.06); border:1px solid rgba(30,127,255,0.2); border-radius:10px; padding:12px 16px; font-size:13px; color:#94A3B8; margin-bottom:16px; }
+    .note-box strong { color:#fff; }
+    .faq-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px; }
+    .service-row { display:grid; grid-template-columns:2fr 1fr 1fr; gap:10px; margin-bottom:10px; }
+    @media(max-width:640px){ .faq-row,.service-row { grid-template-columns:1fr; } }
+    .plan-card { border:2px solid #1E2D45; border-radius:14px; padding:24px; cursor:pointer; transition:all 0.2s ease; position:relative; background:#111827; display:block; }
+    .plan-card:hover { border-color:rgba(30,127,255,0.4); }
+    .plan-card.selected { border-color:#1E7FFF; background:rgba(30,127,255,0.06); }
+    .lang-card { border:2px solid #1E2D45; border-radius:10px; padding:14px 18px; cursor:pointer; transition:all 0.2s ease; background:#111827; display:flex; align-items:center; gap:10px; }
+    .lang-card:hover { border-color:rgba(30,127,255,0.4); }
+    .lang-card.selected { border-color:#1E7FFF; background:rgba(30,127,255,0.06); }
+    .progress-bar { height:4px; background:#1E2D45; border-radius:2px; margin-bottom:32px; }
+    .progress-fill { height:100%; background:#1E7FFF; border-radius:2px; transition:width 0.4s ease; }
+    .day-row { display:grid; grid-template-columns:110px 1fr 1fr 120px; gap:10px; align-items:center; margin-bottom:8px; }
+    @media(max-width:640px){ .day-row { grid-template-columns:80px 1fr 1fr; } .day-closed-col { display:none; } }
+    select.form-input { color:#fff; background-color:#0D1526; }
+    select.form-input option { background-color:#111827; color:#fff; }
+    select.form-input option:disabled { color:#64748B; }
+    #success-screen { display:none; }
+    .logo-wrap { display:flex; align-items:center; gap:10px; text-decoration:none; }
+    .logo-img { width:36px; height:36px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+    .logo-fallback { width:36px; height:36px; background:linear-gradient(135deg,#1E7FFF,#7B2FBE); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Poppins',sans-serif; font-weight:800; font-size:15px; color:#fff; flex-shrink:0; }
+    .logo-text { line-height:1.15; }
+    .logo-text span:first-child { color:#94A3B8; font-weight:500; font-family:'Poppins',sans-serif; font-size:1.25rem; }
+    .logo-text span:last-child { color:#fff; font-weight:700; font-family:'Poppins',sans-serif; font-size:1.25rem; }
+    .logo-sub { font-size:10px; color:#E2E8F0; letter-spacing:0.05em; font-family:'Inter',sans-serif; display:block; }
+  </style>
+</head>
+<body class="bg-primary text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 navbar-blur border-b border-bdark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="index.html" class="logo-wrap">
+        <img src="https://deepakai.in/update_images/logo.png" alt="DeepAKAI" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="logo-fallback" style="display:none;">DA</div>
+        <div class="logo-text flex flex-col">
+          <div><span>Deep</span><span>AKAI</span></div>
+          <span class="logo-sub">Applied Knowledge & AI</span>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="index.html"        class="text-body hover:text-white transition-colors text-sm font-medium">Home</a>
+        <a href="services.html"     class="text-body hover:text-white transition-colors text-sm font-medium">Services</a>
+        <a href="how-it-works.html" class="text-body hover:text-white transition-colors text-sm font-medium">How It Works</a>
+        <a href="industries.html"   class="text-body hover:text-white transition-colors text-sm font-medium">Industries</a>
+        <a href="contact.html"      class="text-body hover:text-white transition-colors text-sm font-medium">Contact</a>
+        <a href="contact.html" class="btn-green">Get Free Demo</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden border-t border-bdark py-4" style="display:none;">
+      <div class="flex flex-col gap-1">
+        <a href="index.html"        class="text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Home</a>
+        <a href="services.html"     class="text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Services</a>
+        <a href="how-it-works.html" class="text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">How It Works</a>
+        <a href="industries.html"   class="text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Industries</a>
+        <a href="contact.html"      class="text-body hover:text-white hover:bg-white/5 py-2.5 px-3 rounded-lg text-sm font-medium transition-colors">Contact</a>
+        <div class="pt-3 px-3"><a href="contact.html" class="btn-green w-full justify-center">Get Free Demo</a></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="hero-grid pt-32 pb-12 text-center">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6">
+    <div class="mb-4"><span class="section-label">📋 Client Onboarding</span></div>
+    <h1 class="font-poppins font-extrabold text-4xl sm:text-5xl mb-4">
+      Set Up Your <span style="color:#1E7FFF;">WhatsApp Bot</span>
+    </h1>
+    <p class="text-body text-lg leading-relaxed">
+      Fill in all the details below. Your bot will be ready within <strong class="text-white">48 hours</strong> of receiving this form.
+    </p>
+    <div class="flex flex-wrap justify-center gap-6 mt-6 text-sm text-body">
+      <span class="flex items-center gap-2"><span style="color:#1E7FFF;">✓</span> 15-day free trial</span>
+      <span class="flex items-center gap-2"><span style="color:#1E7FFF;">✓</span> No payment needed</span>
+      <span class="flex items-center gap-2"><span style="color:#1E7FFF;">✓</span> Bot live in 48 hours</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN FORM -->
+<section class="py-10 bg-primary">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+
+    <!-- SUCCESS SCREEN -->
+    <div id="success-screen" class="card p-12 text-center">
+      <div class="text-6xl mb-6">🎉</div>
+      <h2 class="font-poppins font-bold text-3xl mb-3">Form Submitted!</h2>
+      <p class="text-body text-lg mb-8">Thank you! We have received your details. Our team will contact you within <strong class="text-white">48 hours</strong>.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="index.html" class="btn-outline btn-outline-lg">Go to Home</a>
+        <a href="https://wa.me/919999517081" target="_blank" class="btn-green btn-green-lg">💬 WhatsApp Us</a>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <form id="onboarding-form" novalidate>
+
+      <!-- S1: Business Info -->
+      <div class="card p-6 sm:p-8 mb-6">
+        <div class="section-header">
+          <div class="section-number">1</div>
+          <div><h2 class="font-poppins font-bold text-xl">Business Information</h2><p class="text-body text-sm mt-0.5">Tell us about your business</p></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-sm font-semibold text-white">Business Name *</label>
+            <input type="text" id="business_name" class="form-input" placeholder="e.g. Happy Kids Clinic" required>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-sm font-semibold text-white">Business Type *</label>
+            <select id="business_type" class="form-input" required>
+              <option value="" disabled selected style="color:#64748B;">Select your business type</option>
+              <option value="clinic">Clinic / Hospital</option>
+              <option value="salon">Salon / Parlour</option>
+              <option value="gym">Gym / Fitness Center</option>
+              <option value="ca_office">CA Office</option>
+              <option value="coaching">Coaching / Tuition Center</option>
+              <option value="manpower">Manpower / Recruitment</option>
+              <option value="lawyer">Legal / Law Firm</option>
+              <option value="restaurant">Restaurant / Food</option>
+              <option value="retail">Retail / Shop</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-sm font-semibold text-white">Owner Name *</label>
+            <input type="text" id="owner_name" class="form-input" placeholder="e.g. Dr. Rajesh Sharma" required>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-sm font-semibold text-white">City *</label>
+            <input type="text" id="city" class="form-input" placeholder="e.g. New Delhi" required>
+          </div>
+          <div class="flex flex-col gap-1.5 sm:col-span-2">
+            <label class="text-sm font-semibold text-white">Full Address *</label>
+            <input type="text" id="full_address" class="form-input" placeholder="e.g. Shop 12, Sector 18, Dwarka, New Delhi - 110075" required>
+          </div>
+          <div class="flex flex-col gap-1.5 sm:col-span-2">
+            <label class="text-sm font-semibold text-white">Website <span class="text-muted font-normal">(optional)</span></label>
+            <input type="url" id="website" class="form-input" placeholder="e.g. https://yourwebsite.com">
+          </div>
+        </div>
+      </div>
+
+      <!-- S2: WhatsApp Numbers -->
+      <div class="card p-6 sm:p-8 mb-6">
+        <div class="section-header">
+          <div class="section-number">2</div>
+          <div><h2 class="font-poppins font-bold text-xl">WhatsApp Numbers</h2><p class="text-body text-sm mt-0.5">Two separate numbers are required</p></div>
+        </div>
+        <div class="note-box"><strong>⚠️ Important:</strong> Two separate WhatsApp numbers are required by Meta. One for the AI bot (customer-facing), one for your admin alerts and commands.</div>
+        <div class="mb-6">
+          <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+            <span style="background:rgba(30,127,255,0.12);border:1px solid rgba(30,127,255,0.3);border-radius:6px;padding:2px 10px;font-size:12px;color:#1E7FFF;">BOT NUMBER</span>
+            Customer-Facing Number
+          </h3>
+          <div class="note-box"><strong>⚠️ Note:</strong> Once connected to the bot, this number CANNOT be used on any phone's WhatsApp. This is a permanent Meta restriction.</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="flex flex-col gap-1.5 sm:col-span-2">
+              <label class="text-sm font-semibold text-white">Bot Phone Number *</label>
+              <input type="tel" id="bot_phone" class="form-input" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label class="text-sm font-semibold text-white">Active on WhatsApp? *</label>
+              <select id="bot_number_active" class="form-input" required>
+                <option value="" disabled selected style="color:#64748B;">Select</option>
+                <option value="true">Yes, already active</option>
+                <option value="false">No, new number</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label class="text-sm font-semibold text-white">New SIM or existing? *</label>
+              <select id="bot_number_new" class="form-input" required>
+                <option value="" disabled selected style="color:#64748B;">Select</option>
+                <option value="existing">Existing number</option>
+                <option value="new">New SIM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold text-white mb-3 flex items-center gap-2">
+            <span style="background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.3);border-radius:6px;padding:2px 10px;font-size:12px;color:#25D366;">ADMIN NUMBER</span>
+            Your Personal Number
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="flex flex-col gap-1.5 sm:col-span-2">
+              <label class="text-sm font-semibold text-white">Admin Phone Number *</label>
+              <input type="tel" id="admin_phone" class="form-input" placeholder="+91 99999 00000" required>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label class="text-sm font-semibold text-white">WhatsApp type on this number *</label>
+              <select id="admin_whatsapp_type" class="form-input" required>
+                <option value="" disabled selected style="color:#64748B;">Select</option>
+                <option value="whatsapp">WhatsApp (regular)</option>
+                <option value="whatsapp_business">WhatsApp Business App</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S3: Business Hours -->
+      <div class="card p-6 sm:p-8 mb-6">
+        <div class="section-header">
+          <div class="section-number">3</div>
+          <div><h2 class="font-poppins font-bold text-xl">Business Hours</h2><p class="text-body text-sm mt-0.5">Bot shows "closed" message outside these hours</p></div>
+        </div>
+        <div class="day-row mb-2" style="padding-bottom:8px;border-bottom:1px solid #1E2D45;">
+          <span class="text-xs text-muted font-semibold uppercase">Day</span>
+          <span class="text-xs text-muted font-semibold uppercase">Open</span>
+          <span class="text-xs text-muted font-semibold uppercase">Close</span>
+          <span class="text-xs text-muted font-semibold uppercase day-closed-col">Closed?</span>
+        </div>
+        <div id="hours-container"></div>
+      </div>
+
+      <!-- S4: FAQs -->
+      <div class="card p-6 sm:p-8 mb-6">
+        <div class="section-header">
+          <div class="section-number">4</div>
+          <div><h2 class="font-poppins font-bold text-xl">Frequently Asked Questions</h2><p class="text-body text-sm mt-0.5">Add at least 5 FAQs for best results</p></div>
+        </div>
+        <div class="note-box">Write the most common questions your customers ask. The AI bot will use these to reply automatically.</div>
+        <div class="faq-row mb-2" style="padding-bottom:8px;border-bottom:1px solid #1E2D45;">
+          <span class="text-xs text-muted font-semibold uppercase">Customer Question</span>
+          <span class="text-xs text-muted font-semibold uppercase">Your Answer</span>
+        </div>
+        <div id="faq-container"></div>
+        <button type="button" id="add-faq-btn" class="btn-outline mt-3 text-sm">+ Add Another FAQ</button>
+      </div>
+
+      <!-- S5: Services -->
+      <div class="card p-6 sm:p-8 mb-6">
+        <div class="section-header">
+          <div class="section-number">5</div>
+          <div><h2 class="font-poppins font-bold text-xl">Services &amp; Pricing</h2><p class="text-body text-sm mt-0.5">List your services with prices</p></div>
+        </div>
+        <div class="service-row mb-2" style="padding-bottom:8px;border-bottom:1px solid #1E2D45;">
+          <span class="text-xs text-muted font-semibold uppercase">Service Name</span>
+          <span class="text-xs text-muted font-semibold uppercase">Price (Rs)</span>
+          <span class="text-xs text-muted font-semibold uppercase">Duration / Notes</span>
+        </div>
+        <div id="service-container"></div>
+        <button type="button" id="add-service-btn" class="btn-outline mt-3 text-sm">+ Add Another Service</button>
+      </div>
+
+      <!-- S6: Plan -->
+      <div class="card p-6 sm:p-8 mb-6">
+        <div class="section-header">
+          <div class="section-number">6</div>
+          <div><h2 class="font-poppins font-bold text-xl">Plan Selection</h2><p class="text-body text-sm mt-0.5">15-day free trial — no payment needed</p></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="plan-card" id="plan-essential" onclick="selectPlan('essential')">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-poppins font-bold text-lg">Essential</h3>
+              <div class="text-right"><div class="font-poppins font-bold text-xl" style="color:#1E7FFF;">₹2,500</div><div class="text-muted text-xs">/month</div></div>
+            </div>
+            <div class="text-xs font-semibold mb-3" style="color:#1E7FFF;">Setup FREE (Limited Time)</div>
+            <div class="flex flex-col gap-2">
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> 24/7 AI WhatsApp replies</div>
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> FAQ Automation</div>
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> Lead Capture</div>
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> Talk to Agent / Callback</div>
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> Daily Summary Report</div>
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> Business Hours Auto-Reply</div>
+            </div>
+          </div>
+          <div class="plan-card" id="plan-customized" onclick="selectPlan('customized')" style="border-color:rgba(30,127,255,0.4);">
+            <div class="flex justify-between items-start mb-3">
+              <div>
+                <h3 class="font-poppins font-bold text-lg">Customized</h3>
+                <span class="badge-popular text-xs">⭐ RECOMMENDED</span>
+              </div>
+              <div class="text-right"><div class="font-poppins font-bold text-xl" style="color:#1E7FFF;">₹5,000</div><div class="text-muted text-xs">/month</div></div>
+            </div>
+            <div class="text-xs font-semibold mb-3" style="color:#1E7FFF;">Setup FREE (Limited Time)</div>
+            <div class="flex flex-col gap-2">
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> Everything in Essential</div>
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> Appointment Booking (AI)</div>
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> Admin Booking Controls</div>
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> Confirm / Cancel via WhatsApp</div>
+              <div class="check-item text-sm"><span class="check-icon text-base">✅</span> Export Leads &amp; Bookings (CSV)</div>
+            </div>
+          </div>
+        </div>
+        <p id="plan-error" class="text-red-400 text-sm mt-3" style="display:none;">Please select a plan to continue.</p>
+      </div>
+
+      <!-- S7: Language -->
+      <div class="card p-6 sm:p-8 mb-6">
+        <div class="section-header">
+          <div class="section-number">7</div>
+          <div><h2 class="font-poppins font-bold text-xl">Language Preference</h2><p class="text-body text-sm mt-0.5">What language do your customers use?</p></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="lang-card" id="lang-english" onclick="selectLang('english')">
+            <span class="text-xl">🇬🇧</span>
+            <div><div class="font-semibold text-white text-sm">English</div><div class="text-muted text-xs">Bot replies in English</div></div>
+          </div>
+          <div class="lang-card" id="lang-hindi" onclick="selectLang('hindi')">
+            <span class="text-xl">🇮🇳</span>
+            <div><div class="font-semibold text-white text-sm">Hindi</div><div class="text-muted text-xs">Bot replies in Hindi</div></div>
+          </div>
+          <div class="lang-card" id="lang-hinglish" onclick="selectLang('hinglish')">
+            <span class="text-xl">🤝</span>
+            <div><div class="font-semibold text-white text-sm">Hinglish</div><div class="text-muted text-xs">Mix of Hindi + English (recommended)</div></div>
+          </div>
+          <div class="lang-card" id="lang-other" onclick="selectLang('other')">
+            <span class="text-xl">🌐</span>
+            <div><div class="font-semibold text-white text-sm">Other</div><div class="text-muted text-xs">Specify below</div></div>
+          </div>
+        </div>
+        <div id="lang-other-input" class="mt-4" style="display:none;">
+          <input type="text" id="language_other" class="form-input" placeholder="Please specify your language">
+        </div>
+        <p id="lang-error" class="text-red-400 text-sm mt-3" style="display:none;">Please select a language preference.</p>
+      </div>
+
+      <!-- S8: Confirmation -->
+      <div class="card p-6 sm:p-8 mb-8">
+        <div class="section-header">
+          <div class="section-number">8</div>
+          <div><h2 class="font-poppins font-bold text-xl">Confirmation</h2><p class="text-body text-sm mt-0.5">Please confirm your details</p></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-sm font-semibold text-white">Full Name (Signature) *</label>
+            <input type="text" id="client_signature_name" class="form-input" placeholder="Your full name" required>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label class="text-sm font-semibold text-white">Date</label>
+            <input type="date" id="submission_date" class="form-input" required>
+          </div>
+        </div>
+        <div class="mt-5 p-4 rounded-xl" style="background:rgba(30,127,255,0.05);border:1px solid rgba(30,127,255,0.15);">
+          <p class="text-body text-sm leading-relaxed">By submitting this form, I confirm that all information provided is accurate and I agree to the <a href="privacy-policy.html" class="text-accent hover:underline">Privacy Policy</a> of DeepAKAI. I understand my bot will be set up within 48 hours and the 15-day free trial begins from the go-live date.</p>
+        </div>
+      </div>
+
+      <div id="form-error" class="note-box mb-6" style="display:none;border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.05);color:#FCA5A5;"></div>
+
+      <div class="text-center">
+        <button type="submit" id="submit-btn" class="btn-green btn-green-lg px-12">
+          <span id="submit-text">🚀 Submit Onboarding Form</span>
+          <span id="submit-loading" style="display:none;">⏳ Submitting...</span>
+        </button>
+        <p class="text-muted text-sm mt-4">We will contact you within 48 hours after submission.</p>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background-color:#070C18;border-top:1px solid #1E2D45;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div>
+        <a href="index.html" class="logo-wrap mb-4" style="display:inline-flex;">
+          <img src="https://deepakai.in/update_images/logo.png" alt="DeepAKAI" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="logo-fallback" style="display:none;">DA</div>
+          <div class="logo-text flex flex-col">
+            <div><span>Deep</span><span>AKAI</span></div>
+            <span class="logo-sub">Applied Knowledge & AI</span>
+          </div>
+        </a>
+        <p class="text-body text-sm mt-4 mb-5 leading-relaxed">AI-Powered WhatsApp Solutions for Indian SMBs</p>
+        <div class="flex flex-col gap-2.5 text-sm">
+          <a href="https://wa.me/919999517081" target="_blank" class="flex items-center gap-2 hover:text-accent transition-colors" style="color:#94A3B8;"><span>📱</span> WhatsApp Us</a>
+          <a href="mailto:deepak@deepakai.in" class="flex items-center gap-2 hover:text-white transition-colors" style="color:#94A3B8;"><span>📧</span> deepak@deepakai.in</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-poppins font-semibold text-white mb-4 text-sm uppercase tracking-wider">Company</h4>
+        <ul class="flex flex-col gap-2.5 text-sm">
+          <li><a href="how-it-works.html" class="text-body hover:text-accent transition-colors">How It Works</a></li>
+          <li><a href="industries.html"   class="text-body hover:text-accent transition-colors">Industries</a></li>
+          <li><a href="contact.html"      class="text-body hover:text-accent transition-colors">Contact</a></li>
+          <li><a href="privacy-policy.html" class="text-body hover:text-accent transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-poppins font-semibold text-white mb-4 text-sm uppercase tracking-wider">Get Started</h4>
+        <p class="text-body text-sm mb-5 leading-relaxed">Try risk-free for 15 days. No payment needed upfront.</p>
+        <a href="contact.html" class="btn-green text-sm">Book Free Demo</a>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 border-t border-bdark">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-muted mb-3">
+        <span>© 2026 DeepAKAI Solutions. All rights reserved.</span>
+        <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+      </div>
+      <p class="text-center text-xs text-muted">DeepAKAI is the trading name of DEEPAK AI, registered under UDYAM-DL-10-0120377</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/919999517081" target="_blank" class="whatsapp-float" title="Chat with us">
+  <span class="whatsapp-tooltip">Chat with us</span>
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="js/main.js"></script>
+
+<script>
+// ── All variables declared at top — no hoisting issues ────────
+var API_URL = 'https://web-production-c036d8.up.railway.app/onboarding/submit';
+var selectedPlan = '';
+var selectedLang = '';
+var faqCount = 0;
+var serviceCount = 0;
+var days    = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+var dayKeys = ['mon','tue','wed','thu','fri','sat','sun'];
+
+// ── Business Hours ────────────────────────────────────────────
+var hoursContainer = document.getElementById('hours-container');
+days.forEach(function(day, i) {
+  var key = dayKeys[i];
+  var isSunday = (i === 6);
+  var div = document.createElement('div');
+  div.className = 'day-row';
+  div.innerHTML =
+    '<span class="text-sm font-medium text-white">' + day + '</span>' +
+    '<input type="time" id="open-' + key + '" class="form-input text-sm" value="' + (isSunday ? '' : '10:00') + '"' + (isSunday ? ' disabled style="opacity:0.3"' : '') + '>' +
+    '<input type="time" id="close-' + key + '" class="form-input text-sm" value="' + (isSunday ? '' : '21:00') + '"' + (isSunday ? ' disabled style="opacity:0.3"' : '') + '>' +
+    '<label class="flex items-center gap-2 cursor-pointer day-closed-col">' +
+      '<input type="checkbox" id="closed-' + key + '" ' + (isSunday ? 'checked' : '') + ' style="accent-color:#1E7FFF;width:16px;height:16px;" onchange="toggleDay(\'' + key + '\',this.checked)">' +
+      '<span class="text-sm text-body">Closed</span>' +
+    '</label>';
+  hoursContainer.appendChild(div);
+});
+
+function toggleDay(key, isClosed) {
+  var o = document.getElementById('open-' + key);
+  var c = document.getElementById('close-' + key);
+  o.disabled = isClosed; c.disabled = isClosed;
+  o.style.opacity = isClosed ? '0.3' : '1';
+  c.style.opacity = isClosed ? '0.3' : '1';
+}
+
+// ── FAQ Rows ──────────────────────────────────────────────────
+function addFaqRow() {
+  faqCount++;
+  var div = document.createElement('div');
+  div.className = 'faq-row';
+  div.innerHTML =
+    '<input type="text" class="form-input text-sm faq-q" placeholder="e.g. What are your timings?">' +
+    '<input type="text" class="form-input text-sm faq-a" placeholder="e.g. We are open 10AM to 8PM daily">';
+  document.getElementById('faq-container').appendChild(div);
+}
+for (var i = 0; i < 5; i++) addFaqRow();
+document.getElementById('add-faq-btn').addEventListener('click', function() { addFaqRow(); });
+
+// ── Service Rows ──────────────────────────────────────────────
+function addServiceRow() {
+  serviceCount++;
+  var div = document.createElement('div');
+  div.className = 'service-row';
+  div.innerHTML =
+    '<input type="text" class="form-input text-sm svc-name" placeholder="e.g. Consultation">' +
+    '<input type="text" class="form-input text-sm svc-price" placeholder="e.g. 500">' +
+    '<input type="text" class="form-input text-sm svc-notes" placeholder="e.g. 30 mins">';
+  document.getElementById('service-container').appendChild(div);
+}
+for (var j = 0; j < 3; j++) addServiceRow();
+document.getElementById('add-service-btn').addEventListener('click', function() { addServiceRow(); });
+
+// ── Plan Selection ────────────────────────────────────────────
+function selectPlan(plan) {
+  selectedPlan = plan;
+  document.getElementById('plan-essential').classList.toggle('selected', plan === 'essential');
+  document.getElementById('plan-customized').classList.toggle('selected', plan === 'customized');
+  document.getElementById('plan-error').style.display = 'none';
+  updateProgress();
+}
+
+// ── Language Selection ────────────────────────────────────────
+function selectLang(lang) {
+  selectedLang = lang;
+  ['english','hindi','hinglish','other'].forEach(function(l) {
+    document.getElementById('lang-' + l).classList.toggle('selected', l === lang);
+  });
+  document.getElementById('lang-other-input').style.display = lang === 'other' ? 'block' : 'none';
+  document.getElementById('lang-error').style.display = 'none';
+  updateProgress();
+}
+
+// ── Progress Bar ──────────────────────────────────────────────
+function updateProgress() {
+  var filled = 0;
+  if (document.getElementById('business_name').value.trim()) filled++;
+  if (document.getElementById('bot_phone').value.trim()) filled++;
+  if (document.getElementById('admin_phone').value.trim()) filled++;
+  var faqQs = document.querySelectorAll('.faq-q');
+  if (faqQs.length && faqQs[0].value.trim()) filled++;
+  var svcNames = document.querySelectorAll('.svc-name');
+  if (svcNames.length && svcNames[0].value.trim()) filled++;
+  if (selectedPlan) filled++;
+  if (selectedLang) filled++;
+  if (document.getElementById('client_signature_name').value.trim()) filled++;
+  document.getElementById('progress-fill').style.width = Math.round((filled / 8) * 100) + '%';
+}
+document.getElementById('onboarding-form').addEventListener('input', updateProgress);
+
+// ── Set today's date ──────────────────────────────────────────
+document.getElementById('submission_date').value = new Date().toISOString().split('T')[0];
+
+// ── Mobile Menu ───────────────────────────────────────────────
+document.getElementById('menu-btn').addEventListener('click', function() {
+  var m = document.getElementById('mobile-menu');
+  m.style.display = m.style.display === 'none' ? 'block' : 'none';
+});
+
+// ── Form Submit ───────────────────────────────────────────────
+document.getElementById('onboarding-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  var required = ['business_name','business_type','owner_name','city','full_address',
+                  'bot_phone','bot_number_active','bot_number_new',
+                  'admin_phone','admin_whatsapp_type','client_signature_name'];
+  var valid = true;
+
+  required.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el.value.trim()) { el.style.borderColor = '#EF4444'; valid = false; }
+    else { el.style.borderColor = ''; }
+  });
+
+  if (!selectedPlan) { document.getElementById('plan-error').style.display = 'block'; valid = false; }
+  if (!selectedLang) { document.getElementById('lang-error').style.display = 'block'; valid = false; }
+
+  if (!valid) {
+    var errEl = document.getElementById('form-error');
+    errEl.textContent = '⚠️ Please fill in all required fields before submitting.';
+    errEl.style.display = 'block';
+    document.getElementById('onboarding-form').querySelector('[style*="EF4444"]').scrollIntoView({ behavior:'smooth', block:'center' });
+    return;
+  }
+  document.getElementById('form-error').style.display = 'none';
+
+  // Collect business hours
+  var businessHours = {};
+  dayKeys.forEach(function(key) {
+    var isClosed = document.getElementById('closed-' + key).checked;
+    businessHours[key] = isClosed ? null : {
+      open:  document.getElementById('open-' + key).value  || '10:00',
+      close: document.getElementById('close-' + key).value || '21:00'
+    };
+  });
+
+  // Collect FAQs
+  var faqs = [];
+  var faqQEls = document.querySelectorAll('.faq-q');
+  var faqAEls = document.querySelectorAll('.faq-a');
+  faqQEls.forEach(function(q, idx) {
+    if (q.value.trim() && faqAEls[idx].value.trim())
+      faqs.push({ question: q.value.trim(), answer: faqAEls[idx].value.trim() });
+  });
+
+  // Collect Services
+  var services = [];
+  var svcNameEls  = document.querySelectorAll('.svc-name');
+  var svcPriceEls = document.querySelectorAll('.svc-price');
+  var svcNoteEls  = document.querySelectorAll('.svc-notes');
+  svcNameEls.forEach(function(n, idx) {
+    if (n.value.trim())
+      services.push({ name: n.value.trim(), price: svcPriceEls[idx].value.trim(), notes: svcNoteEls[idx].value.trim() });
+  });
+
+  var payload = {
+    business_name:         document.getElementById('business_name').value.trim(),
+    business_type:         document.getElementById('business_type').value,
+    owner_name:            document.getElementById('owner_name').value.trim(),
+    city:                  document.getElementById('city').value.trim(),
+    full_address:          document.getElementById('full_address').value.trim(),
+    website:               document.getElementById('website').value.trim(),
+    bot_phone:             document.getElementById('bot_phone').value.trim(),
+    bot_number_active:     document.getElementById('bot_number_active').value === 'true',
+    bot_number_new:        document.getElementById('bot_number_new').value,
+    admin_phone:           document.getElementById('admin_phone').value.trim(),
+    admin_whatsapp_type:   document.getElementById('admin_whatsapp_type').value,
+    business_hours:        businessHours,
+    faqs:                  faqs,
+    services:              services,
+    selected_plan:         selectedPlan,
+    language_preference:   selectedLang,
+    language_other:        (document.getElementById('language_other').value || '').trim(),
+    client_signature_name: document.getElementById('client_signature_name').value.trim(),
+    submission_date:       document.getElementById('submission_date').value,
+  };
+
+  document.getElementById('submit-text').style.display = 'none';
+  document.getElementById('submit-loading').style.display = 'inline';
+  document.getElementById('submit-btn').disabled = true;
+
+  fetch(API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(function(res) {
+    if (res.ok) {
+      document.getElementById('onboarding-form').style.display = 'none';
+      document.getElementById('success-screen').style.display = 'block';
+      document.getElementById('progress-fill').style.width = '100%';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else { throw new Error('Server error'); }
+  })
+  .catch(function() {
+    var errEl = document.getElementById('form-error');
+    errEl.textContent = '⚠️ Submission failed. Please try again or WhatsApp us at +91 99995 17081.';
+    errEl.style.display = 'block';
+    document.getElementById('submit-text').style.display = 'inline';
+    document.getElementById('submit-loading').style.display = 'none';
+    document.getElementById('submit-btn').disabled = false;
+  });
+});
+</script>
+
+</body>
+</html>
