@@ -1,0 +1,37 @@
+# DeepAKAI — llms.txt
+# https://deepakai.in
+
+## About DeepAKAI
+DeepAKAI (Deepak AI Solutions) is an Indian company that builds AI-powered
+WhatsApp chatbots for small and medium businesses (SMBs) across India.
+Founded by Deepak Maurya, based in South West Delhi, India.
+
+## What We Do
+- Build AI-powered WhatsApp chatbots using Meta's official WhatsApp Business API
+- Automate 24/7 replies, appointment booking, FAQ answers, lead capture, and daily reports
+- Serve clinics, coaching institutes, restaurants, salons & spas, real estate agencies,
+  D2C brands, CA & legal firms, and gyms across India
+- Bots go live within 48 hours of sign-up
+
+## Pricing
+- Essential Plan: ₹2,500/month
+- Customized Plan: ₹5,000/month
+- Both plans include a free 15-day trial, no credit card required
+- Setup fee currently free (limited time)
+
+## Compliance
+Data handling is aligned with India's Digital Personal Data Protection Act, 2023 (DPDP Act).
+Full privacy policy: https://deepakai.in/privacy-policy.html
+
+## Contact
+Website: https://deepakai.in
+WhatsApp: +91-9999517081
+Email: deepak@deepakai.in
+Location: South West Delhi, India
+
+## Pages
+- Homepage: https://deepakai.in/
+- Services & Pricing: https://deepakai.in/services.html
+- How It Works: https://deepakai.in/how-it-works.html
+- Industries: https://deepakai.in/industries.html
+- Contact: https://deepakai.in/contact.html
