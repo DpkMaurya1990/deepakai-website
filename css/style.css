@@ -383,8 +383,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== FAQ Accordion ===== */
 .faq-item {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background-color: #111827;
+  border: 1px solid #1E2D45;
   border-radius: 12px;
   margin-bottom: 12px;
   overflow: hidden;
@@ -404,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   font-weight: 600;
   font-size: 15px;
-  color: var(--text-primary);
+  color: #ffffff;
   font-family: 'Inter', sans-serif;
 }
 
@@ -414,7 +414,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.35s ease;
   opacity: 0;
   padding: 0 20px;
-  color: var(--text-secondary);
+  color: #94A3B8;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -428,13 +428,9 @@ h1, h2, h3, h4, h5, h6 {
 .faq-icon {
   transition: transform 0.3s ease;
   flex-shrink: 0;
-  color: var(--accent);
+  color: #1E7FFF;
   font-size: 20px;
   font-weight: 400;
-}
-
-.faq-icon.rotated {
-  transform: rotate(45deg);
 }
 
 /* ===== Comparison Table ===== */
