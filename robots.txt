@@ -1,25 +1,31 @@
 User-agent: *
 Allow: /
+Disallow: /onboarding.html
 
 # Allow Google AI (Gemini)
 User-agent: Google-Extended
 Allow: /
+Disallow: /onboarding.html
 
 # Allow ChatGPT crawler
 User-agent: GPTBot
 Allow: /
+Disallow: /onboarding.html
 
 # Allow Anthropic/Claude crawler
 User-agent: ClaudeBot
 Allow: /
+Disallow: /onboarding.html
 
 # Allow Perplexity
 User-agent: PerplexityBot
 Allow: /
+Disallow: /onboarding.html
 
 # Allow Bing AI
 User-agent: Bingbot
 Allow: /
+Disallow: /onboarding.html
 
 # Sitemap location
 Sitemap: https://deepakai.in/sitemap.xml
