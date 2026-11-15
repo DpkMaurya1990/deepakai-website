@@ -12,6 +12,7 @@ Founded by Deepak Maurya, based in South West Delhi, India.
 - Serve clinics, coaching institutes, restaurants, salons & spas, real estate agencies,
   D2C brands, CA & legal firms, and gyms across India
 - Bots go live within 48 hours of sign-up
+- Bots reply in Hindi, English and Hinglish
 
 ## Pricing
 - Essential Plan: ₹2,500/month
@@ -40,4 +41,5 @@ Location: South West Delhi, India
 - Clinics & Doctors: https://deepakai.in/clinics.html - WhatsApp chatbot for clinics with appointment booking, patient reminders and 24/7 replies to patient questions
 - Salons & Spas: https://deepakai.in/salons.html - WhatsApp chatbot for salons and spas with appointment booking, business hours auto-replies and 24/7 booking
 - Restaurants: https://deepakai.in/restaurants.html - WhatsApp chatbot for restaurants with menu sharing, table reservations and direct WhatsApp orders without Zomato/Swiggy commission
-- Other industries (coaching institutes, real estate, D2C brands, CA & legal firms, gyms): https://deepakai.in/industries.html
+- Coaching Institutes: https://deepakai.in/coaching.html - WhatsApp chatbot for coaching institutes with course and fee info, demo class booking and 24/7 replies to student enquiries
+- Other industries (real estate, D2C brands, CA & legal firms, gyms): https://deepakai.in/industries.html
