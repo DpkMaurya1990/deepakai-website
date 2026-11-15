@@ -35,3 +35,9 @@ Location: South West Delhi, India
 - How It Works: https://deepakai.in/how-it-works.html
 - Industries: https://deepakai.in/industries.html
 - Contact: https://deepakai.in/contact.html
+
+## Industry Pages
+- Clinics & Doctors: https://deepakai.in/clinics.html - WhatsApp chatbot for clinics with appointment booking, patient reminders and 24/7 replies to patient questions
+- Salons & Spas: https://deepakai.in/salons.html - WhatsApp chatbot for salons and spas with appointment booking, business hours auto-replies and 24/7 booking
+- Restaurants: https://deepakai.in/restaurants.html - WhatsApp chatbot for restaurants with menu sharing, table reservations and direct WhatsApp orders without Zomato/Swiggy commission
+- Other industries (coaching institutes, real estate, D2C brands, CA & legal firms, gyms): https://deepakai.in/industries.html
