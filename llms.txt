@@ -44,4 +44,5 @@ Location: South West Delhi, India
 - Coaching Institutes: https://deepakai.in/coaching.html - WhatsApp chatbot for coaching institutes with course and fee info, demo class booking requests and 24/7 replies to student enquiries
 - Real Estate: https://deepakai.in/real-estate.html - WhatsApp chatbot for real estate agents with buyer lead capture, instant answers to property questions and 24/7 replies
 - D2C Brands: https://deepakai.in/d2c-brands.html - WhatsApp chatbot for D2C brands with instant answers to product questions, lead capture and 24/7 replies
-- Other industries (CA & legal firms, gyms): https://deepakai.in/industries.html
+- CA & Legal Firms: https://deepakai.in/ca-legal.html - WhatsApp chatbot for CA and legal firms with instant answers to service and fee questions, consultation requests and 24/7 replies
+- Other industries (gyms): https://deepakai.in/industries.html
